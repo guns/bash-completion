@@ -39,8 +39,8 @@ fi
 
 # Alter the following to reflect the location of this file.
 #
-[ -n "$BASH_COMPLETION_COMPAT_DIR" ] || BASH_COMPLETION_COMPAT_DIR=/etc/bash_completion.d
-readonly BASH_COMPLETION_COMPAT_DIR
+[ -n "$BASH_COMPLETION_DIRS" ] || BASH_COMPLETION_DIRS=(/etc/bash_completion.d)
+readonly BASH_COMPLETION_DIRS
 
 # Blacklisted completions, causing problems with our code.
 #
@@ -1811,28 +1811,19 @@ _install_xspec '!*.@(mp[234c]|og[ag]|@(fl|a)ac|m4[abp]|spx|tta|w?(a)v|wma|aif?(f
 unset -f _install_xspec
 
 # source completion directory definitions
-if [[ -d $BASH_COMPLETION_COMPAT_DIR && -r $BASH_COMPLETION_COMPAT_DIR && \
-    -x $BASH_COMPLETION_COMPAT_DIR ]]; then
-    for i in $(LC_ALL=C command ls "$BASH_COMPLETION_COMPAT_DIR"); do
-        i=$BASH_COMPLETION_COMPAT_DIR/$i
-        [[ ${i##*/} != @($_backup_glob|Makefile*|$_blacklist_glob) \
-            && -f $i && -r $i ]] && . "$i"
-    done
-fi
-if [[ "${BASH_SOURCE[0]%/*}/completions" != $BASH_COMPLETION_COMPAT_DIR && \
-    -d "${BASH_SOURCE[0]%/*}/completions" && -r "${BASH_SOURCE[0]%/*}/completions" && \
-    -x "${BASH_SOURCE[0]%/*}/completions" ]]; then
-    for i in $(LC_ALL=C command ls "${BASH_SOURCE[0]%/*}/completions"); do
-        i="${BASH_SOURCE[0]%/*}/completions/$i"
-        [[ ${i##*/} != @($_backup_glob|Makefile*|$_blacklist_glob) \
-            && -f $i && -r $i ]] && . "$i"
-    done
-fi
-unset i
-
-# source user completion file
-[[ ${BASH_SOURCE[0]} != ~/.bash_completion && -r ~/.bash_completion ]] \
-    && . ~/.bash_completion
+declare -A files
+for dir in "${BASH_COMPLETION_DIRS[@]}"; do
+    if [[ -d $dir && -r $dir && -x $dir ]]; then
+        for i in $(LC_ALL=C command ls "$dir"); do
+            (( files[${i%%.*}] )) || {
+                files[${i%%.*}]=1
+                i=$dir/$i
+                [[ ${i##*/} != @($_backup_glob|Makefile*|$_blacklist_glob) && -f $i && -r $i ]] && . "$i"
+            }
+        done
+    fi
+done
+unset files dir i
 unset -f have
 unset UNAME USERLAND have
 
