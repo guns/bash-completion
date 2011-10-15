@@ -11,10 +11,9 @@ proc teardown {} {
 setup
 
 
-assert_complete_any "ping "
-sync_after_int
+assert_complete_any "fbi "
 
-assert_complete_any "ping -"
+
 sync_after_int
 
 

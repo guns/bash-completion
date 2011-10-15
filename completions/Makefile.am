@@ -21,6 +21,7 @@ bashcomp_DATA = abook \
 		cardctl \
 		cfengine \
 		chkconfig \
+		chrpath \
 		chsh \
 		cksfv \
 		clisp \
@@ -46,6 +47,9 @@ bashcomp_DATA = abook \
 		dvd+rw-tools \
 		e2fsprogs \
 		evince \
+		fbi \
+		feh \
+		file \
 		findutils \
 		freeciv \
 		freerdp \
@@ -76,6 +80,7 @@ bashcomp_DATA = abook \
 		ipmitool \
 		iproute2 \
 		ipsec \
+		iputils \
 		ipv6calc \
 		isql \
 		jar \
@@ -132,6 +137,7 @@ bashcomp_DATA = abook \
 		postfix \
 		postgresql \
 		povray \
+		prelink \
 		procps \
 		protoc \
 		puppet \
@@ -187,6 +193,7 @@ bashcomp_DATA = abook \
 		wol \
 		wtf \
 		wvdial \
+		xgamma \
 		xhost \
 		xm \
 		xmllint \

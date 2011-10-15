@@ -11,10 +11,10 @@ proc teardown {} {
 setup
 
 
-assert_complete_any "ping "
-sync_after_int
+set test "-gam<TAB> should complete \"-gamma\""
+assert_complete "-gamma" "xgamma -gam" $test
 
-assert_complete_any "ping -"
+
 sync_after_int
 
 
