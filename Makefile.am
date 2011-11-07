@@ -1,6 +1,9 @@
-SUBDIRS = completions helpers test
+SUBDIRS = completions doc helpers test
 
 pkgdata_DATA = bash_completion
+
+# Empty, but here just to get the compat dir created with install
+compat_DATA =
 
 profiledir = $(sysconfdir)/profile.d
 profile_DATA = bash_completion.sh
@@ -13,10 +16,12 @@ bash_completion.sh: bash_completion.sh.in Makefile
 
 CLEANFILES = bash_completion.sh bash-completion.pc
 
-EXTRA_DIST = CHANGES $(sysconf_DATA) $(pkgdata_DATA) bash_completion.sh.in
+EXTRA_DIST = CHANGES $(sysconf_DATA) $(pkgdata_DATA) bash_completion.sh.in \
+        .dir-locals.el
 
 install-data-hook:
 	tmpfile=`mktemp $${TMPDIR:-/tmp}/bash_completion.XXXXXX` && \
-	sed -e 's|=/etc/bash_completion\.d|=$(sysconfdir)/bash_completion.d|' \
+	sed -e 's|=/etc/bash_completion\.d|=$(compatdir)|' \
 		$(DESTDIR)$(pkgdatadir)/bash_completion > $$tmpfile && \
-	mv $$tmpfile $(DESTDIR)$(pkgdatadir)/bash_completion
+	cat $$tmpfile > $(DESTDIR)$(pkgdatadir)/bash_completion && \
+	rm $$tmpfile
