@@ -126,6 +126,7 @@ bashcomp_DATA = a2x \
 		invoke-rc.d \
 		ionice \
 		ip \
+		iperf \
 		iptables \
 		ipmitool \
 		ipsec \
@@ -199,6 +200,7 @@ bashcomp_DATA = a2x \
 		mysql \
 		mysqladmin \
 		ncftp \
+		nethogs \
 		newgrp \
 		newlist \
 		newusers \
