@@ -20,6 +20,7 @@ bashcomp_DATA = a2x \
 		autoreconf \
 		autorpm \
 		autoscan \
+		avctrl \
 		badblocks \
 		bk \
 		brctl \
@@ -54,8 +55,8 @@ bashcomp_DATA = a2x \
 		cpio \
 		cppcheck \
 		crontab \
-		curl \
 		cryptsetup \
+		curl \
 		cvs \
 		cvsps \
 		dd \
@@ -63,6 +64,7 @@ bashcomp_DATA = a2x \
 		dhclient \
 		dict \
 		dmesg \
+		dnsspoof \
 		dot \
 		dpkg \
 		dpkg-source \
@@ -114,6 +116,7 @@ bashcomp_DATA = a2x \
 		hddtemp \
 		hid2hci \
 		hping2 \
+		htop \
 		htpasswd \
 		iconv \
 		id \
@@ -128,9 +131,9 @@ bashcomp_DATA = a2x \
 		ionice \
 		ip \
 		iperf \
-		iptables \
 		ipmitool \
 		ipsec \
+		iptables \
 		ipv6calc \
 		iscsiadm \
 		isql \
@@ -253,8 +256,8 @@ bashcomp_DATA = a2x \
 		remove_members \
 		removepkg \
 		renice \
-		reptyr \
 		reportbug \
+		reptyr \
 		resolvconf \
 		rfkill \
 		ri \
@@ -296,6 +299,7 @@ bashcomp_DATA = a2x \
 		tcpnice \
 		tracepath \
 		tune2fs \
+		udevadm \
 		umount \
 		umount.linux \
 		unace \
