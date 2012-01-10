@@ -1710,7 +1710,7 @@ _command_offset()
             else
                 cspec=${cspec#complete}
                 cspec=${cspec%%$compcmd}
-                COMPREPLY=( $( eval compgen "$cspec" -- "$cur" ) )
+                COMPREPLY=( $( eval compgen "$cspec" -- '$cur' ) )
             fi
         elif [[ ${#COMPREPLY[@]} -eq 0 ]]; then
             # XXX will probably never happen as long as completion loader loads
@@ -1728,7 +1728,7 @@ _root_command()
     local root_command=$1
     _command
 }
-complete -F _root_command fakeroot gksu gksudo kdesudo really sudo
+complete -F _root_command fakeroot gksu gksudo kdesudo really
 
 # Return true if the completion should be treated as running as root
 _complete_as_root()
