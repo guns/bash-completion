@@ -75,6 +75,7 @@ bashcomp_DATA = a2x \
 		dumpe2fs \
 		e2freefrag \
 		e2label \
+		eog \
 		ether-wake \
 		evince \
 		explodepkg \
@@ -332,6 +333,7 @@ bashcomp_DATA = a2x \
 		withlist \
 		wodim \
 		wol \
+		wsimport \
 		wtf \
 		wvdial \
 		xfreerdp \
