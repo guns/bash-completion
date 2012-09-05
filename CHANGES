@@ -1,3 +1,7 @@
+  [ Guillaume Rousse ]
+  * gphoto2: new completion
+  * nmcli: new completion
+
 bash-completion (2.0)
 
   [ Anthony Ramine ]

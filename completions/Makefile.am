@@ -75,6 +75,7 @@ bashcomp_DATA = a2x \
 		dumpe2fs \
 		e2freefrag \
 		e2label \
+		eject \
 		eog \
 		ether-wake \
 		evince \
@@ -106,6 +107,7 @@ bashcomp_DATA = a2x \
 		gpasswd \
 		gpg \
 		gpg2 \
+		gphoto2 \
 		gprof \
 		groupadd \
 		groupdel \
@@ -218,9 +220,11 @@ bashcomp_DATA = a2x \
 		newlist \
 		newusers \
 		nmap \
+		nmcli \
 		nslookup \
 		ntpdate \
 		openssl \
+		opera \
 		p4 \
 		pack200 \
 		passwd \
