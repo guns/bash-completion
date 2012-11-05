@@ -1,6 +1,12 @@
   [ Guillaume Rousse ]
   * gphoto2: new completion
   * nmcli: new completion
+  * new Solaris completions, contributed by Yann Rouillard <yann@opencsw.org>:
+    - svcadm
+    - pkg-get
+    - pkgadd
+    - pkgdrm
+    - pkgutil
 
 bash-completion (2.0)
 

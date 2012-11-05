@@ -11,15 +11,7 @@ proc teardown {} {
 setup
 
 
-assert_complete_any "wget --"
-
-
-sync_after_int
-
-
-assert_no_complete "wget "
-
-
+assert_complete_any "pkgadd "
 sync_after_int
 
 

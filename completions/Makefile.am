@@ -234,8 +234,12 @@ bashcomp_DATA = a2x \
 		pine \
 		ping \
 		pkg-config \
+		pkg-get \
 		pkg_delete \
+		pkgadd \
+		pkgrm \
 		pkgtool \
+		pkgutil \
 		plague-client \
 		pm-hibernate \
 		pm-is-supported \
@@ -303,6 +307,7 @@ bashcomp_DATA = a2x \
 		strace \
 		su \
 		sudo \
+		svcadm \
 		svk \
 		sync_members \
 		sysbench \
@@ -334,6 +339,7 @@ bashcomp_DATA = a2x \
 		vpnc \
 		watch \
 		webmitm \
+		wget \
 		wine \
 		withlist \
 		wodim \
