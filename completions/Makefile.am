@@ -532,6 +532,7 @@ CLEANFILES = \
 	vgchange \
 	vgck \
 	vgconvert \
+	vgcreate \
 	vgdisplay \
 	vgexport \
 	vgextend \
@@ -550,7 +551,7 @@ CLEANFILES = \
 	xvnc4viewer \
 	ypcat
 
-symlinks: $(targetdir)
+symlinks: $(targetdir) $(DATA)
 	for file in aclocal-1.11 ; do \
 		rm -f $(targetdir)/$$file && \
 			$(LN_S) aclocal $(targetdir)/$$file ; \
@@ -684,7 +685,7 @@ symlinks: $(targetdir)
 	done
 	for file in lvmdiskscan pvscan pvs pvdisplay pvchange pvcreate pvmove \
 		pvremove vgscan vgs vgdisplay vgchange vgremove vgrename \
-		vgreduce vgextend vgimport vgexport vgck vgconvert \
+		vgreduce vgextend vgimport vgexport vgck vgconvert vgcreate \
 		vgcfgbackup vgcfgrestore vgmerge vgsplit vgmknodes lvscan lvs \
 		lvdisplay lvchange lvcreate lvremove lvrename lvreduce \
 		lvresize lvextend ; do \
