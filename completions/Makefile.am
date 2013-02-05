@@ -41,6 +41,7 @@ bashcomp_DATA = a2x \
 		chkconfig \
 		chown \
 		chpasswd \
+		chronyc \
 		chrpath \
 		chsh \
 		cksfv \
@@ -178,6 +179,8 @@ bashcomp_DATA = a2x \
 		lpr \
 		lrzip \
 		lsof \
+		luseradd \
+		luserdel \
 		lvm \
 		lzip \
 		lzma \
@@ -214,11 +217,13 @@ bashcomp_DATA = a2x \
 		mutt \
 		mysql \
 		mysqladmin \
+		nc \
 		ncftp \
 		nethogs \
 		newgrp \
 		newlist \
 		newusers \
+		ngrep \
 		nmap \
 		nmcli \
 		nslookup \
@@ -260,6 +265,8 @@ bashcomp_DATA = a2x \
 		pwd \
 		pwdx \
 		pwgen \
+		pydoc \
+		pylint \
 		python \
 		qdbus \
 		qemu \
@@ -317,6 +324,7 @@ bashcomp_DATA = a2x \
 		tcpkill \
 		tcpnice \
 		tracepath \
+		tshark \
 		tune2fs \
 		udevadm \
 		umount \
@@ -440,6 +448,7 @@ CLEANFILES = \
 	ldappasswd \
 	ldapwhoami \
 	lintian-info \
+	lusermod \
 	lvchange \
 	lvcreate \
 	lvdisplay \
@@ -492,6 +501,7 @@ CLEANFILES = \
 	pvs \
 	pvscan \
 	pxz \
+	pydoc3 \
 	python2 \
 	python3 \
 	quotacheck \
@@ -683,6 +693,10 @@ symlinks: $(targetdir) $(DATA)
 		rm -f $(targetdir)/$$file && \
 			$(LN_S) lintian $(targetdir)/$$file ; \
 	done
+	for file in lusermod ; do \
+		rm -f $(targetdir)/$$file && \
+			$(LN_S) luseradd $(targetdir)/$$file ; \
+	done
 	for file in lvmdiskscan pvscan pvs pvdisplay pvchange pvcreate pvmove \
 		pvremove vgscan vgs vgdisplay vgchange vgremove vgrename \
 		vgreduce vgextend vgimport vgexport vgck vgconvert vgcreate \
@@ -764,6 +778,10 @@ symlinks: $(targetdir) $(DATA)
 		filebucket puppetdoc ; do \
 		rm -f $(targetdir)/$$file && \
 			$(LN_S) puppet $(targetdir)/$$file ; \
+	done
+	for file in pydoc3 ; do \
+		rm -f $(targetdir)/$$file && \
+			$(LN_S) pydoc $(targetdir)/$$file ; \
 	done
 	for file in python2 python3 ; do \
 		rm -f $(targetdir)/$$file && \

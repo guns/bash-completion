@@ -71,6 +71,7 @@ ldapmodrdn
 ldappasswd
 ldapwhoami
 lintian-info
+lusermod
 lvchange
 lvcreate
 lvdisplay
@@ -123,6 +124,7 @@ pvremove
 pvs
 pvscan
 pxz
+pydoc3
 python2
 python3
 quotacheck
