@@ -87,6 +87,7 @@ bashcomp_DATA = a2x \
 		fbi \
 		feh \
 		file \
+		file-roller \
 		filefrag \
 		filesnarf \
 		find \
@@ -119,6 +120,7 @@ bashcomp_DATA = a2x \
 		gzip \
 		hcitool \
 		hddtemp \
+		hexdump \
 		hid2hci \
 		hping2 \
 		htop \
@@ -305,6 +307,7 @@ bashcomp_DATA = a2x \
 		smbclient \
 		snownews \
 		sqlite3 \
+		ss \
 		ssh \
 		ssh-add \
 		ssh-copy-id \
@@ -312,6 +315,7 @@ bashcomp_DATA = a2x \
 		sshmitm \
 		sshow \
 		strace \
+		strings \
 		su \
 		sudo \
 		svcadm \
@@ -366,6 +370,7 @@ bashcomp_DATA = a2x \
 		xrandr \
 		xrdb \
 		xsltproc \
+		xxd \
 		xz \
 		xzdec \
 		ypmatch \
@@ -427,6 +432,7 @@ CLEANFILES = \
 	gpc \
 	hciattach \
 	hciconfig \
+	hd \
 	host \
 	hping \
 	hping3 \
@@ -659,6 +665,10 @@ symlinks: $(targetdir) $(DATA)
 		hciattach ; do \
 		rm -f $(targetdir)/$$file && \
 			$(LN_S) hcitool $(targetdir)/$$file ; \
+	done
+	for file in hd ; do \
+		rm -f $(targetdir)/$$file && \
+			$(LN_S) hexdump $(targetdir)/$$file ; \
 	done
 	for file in hping hping3 ; do \
 		rm -f $(targetdir)/$$file && \
