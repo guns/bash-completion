@@ -135,6 +135,7 @@ bashcomp_DATA = a2x \
 		inject \
 		insmod \
 		installpkg \
+		interdiff \
 		invoke-rc.d \
 		ionice \
 		ip \
@@ -181,6 +182,8 @@ bashcomp_DATA = a2x \
 		lpr \
 		lrzip \
 		lsof \
+		lua \
+		luac \
 		luseradd \
 		luserdel \
 		lvm \
