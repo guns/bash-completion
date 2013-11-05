@@ -28,6 +28,7 @@ bashcomp_DATA = 2to3 \
 		bk \
 		brctl \
 		btdownloadheadless.py \
+		bts \
 		bzip2 \
 		cal \
 		cancel \
@@ -332,6 +333,7 @@ bashcomp_DATA = 2to3 \
 		tcpdump \
 		tcpkill \
 		tcpnice \
+		timeout \
 		tracepath \
 		tshark \
 		tune2fs \
