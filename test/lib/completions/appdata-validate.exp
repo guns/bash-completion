@@ -11,9 +11,7 @@ proc teardown {} {
 setup
 
 
-assert_complete_any "wtf A"
-
-
+assert_complete_any "appdata-validate "
 sync_after_int
 
 
