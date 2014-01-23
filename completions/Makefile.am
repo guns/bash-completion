@@ -158,6 +158,7 @@ bashcomp_DATA = 2to3 \
 		jarsigner \
 		java \
 		javaws \
+		jpegoptim \
 		jps \
 		k3b \
 		kcov \
@@ -319,6 +320,7 @@ bashcomp_DATA = 2to3 \
 		ssh \
 		ssh-add \
 		ssh-copy-id \
+		ssh-keygen \
 		sshfs \
 		sshmitm \
 		sshow \
