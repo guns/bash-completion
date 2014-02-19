@@ -11,7 +11,7 @@ proc teardown {} {
 setup
 
 
-assert_complete_any "rtcwake "
+assert_complete_any "flake8 "
 sync_after_int
 
 
