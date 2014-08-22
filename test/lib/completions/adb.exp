@@ -11,11 +11,7 @@ proc teardown {} {
 setup
 
 
-assert_complete_any "vgcreate -"
-sync_after_int
-
-
-assert_no_complete "vgcreate __does_not_exist__"
+assert_complete_any "adb "
 sync_after_int
 
 
