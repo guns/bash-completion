@@ -1960,6 +1960,7 @@ _load_comp()
         for compfile in "${cmd##*/}" _"${cmd##*/}"; do
             compfile="$compdir/$compfile"
             # Avoid trying to source dirs; https://bugzilla.redhat.com/903540
+            # Return 0 for TCOMP -- guns
             [[ -f "$compfile" ]] && . "$compfile" &>/dev/null && return 0
         done
     done
